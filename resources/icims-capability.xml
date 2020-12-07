@@ -1,0 +1,54 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="icims-capability" />
+  <url value="https://www.icims.com.au/fhir/CapabilityStatement/icims-capability" />
+  <version value="1.0.0" />
+  <name value="Icims CapabilityStatement" />
+  <status value="draft" />
+  <experimental value="true" />
+  <date value="2019-07-16T09:12:00+10:00" />
+  <publisher value="Pyrohealth.net" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://pyrohealth.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="The CapabilityStatement for the Icims interface" />
+  <kind value="instance" />
+  <fhirVersion value="3.0.1" />
+  <acceptUnknown value="extensions" />
+  <format value="json" />
+  <messaging>
+    <endpoint>
+      <protocol>
+        <system value="http://hl7.org/fhir/message-transport" />
+        <code value="http" />
+      </protocol>
+      <address value="http://localhost:60823/api/fhir" />
+    </endpoint>
+    <supportedMessage>
+      <mode value="receiver" />
+      <definition>
+        <reference value="https://www.icims.com.au/fhir/MessageDefinition/icims-diagnosticreport-provide" />
+      </definition>
+    </supportedMessage>
+    <event>
+      <code>
+        <system value="http://hl7.org/fhir/message-events" />
+        <code value="diagnosticreport-provide" />
+        <display value="diagnosticreport-provide" />
+      </code>
+      <category value="Notification" />
+      <mode value="receiver" />
+      <focus value="DiagnosticReport" />
+      <request>
+        <reference value="https://www.icims.com.au/fhir/StructureDefinition/icims-Bundle-diagnosticreport-provide-request" />
+      </request>
+      <response>
+        <reference value="https://www.icims.com.au/fhir/StructureDefinition/icims-OperationOutcome-diagnosticreport-provide-response" />
+      </response>
+      <documentation value="The sender will send one FHIR Bundle message containing a collection of FHIR resources to the ICIMS receiver endpoint. Once successfully processed ICIMS will return a HTTP status code of ‘204 No Content’ and no data in the HTTP body. This then completes a successful message delivery and allows the next sequential FHIR Bundle message to be sent from HL7 Connect.If an error is encountered by ICIMS in processing the FHIR Bundle message then ICIMS will reply with a HTTP status code between the range of 400 to 500 and should also supply a FHIR OperationOutcome resource with additional information" />
+    </event>
+  </messaging>
+</CapabilityStatement>

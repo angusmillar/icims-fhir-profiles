@@ -1,0 +1,236 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="icims-patient" />
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>ICIMS Patient profile for use within Australia</p>
+    </div>
+  </text>
+  <url value="https://www.icims.com.au/fhir/StructureDefinition/icims-patient" />
+  <version value="0.0.1" />
+  <name value="IcimsPatient" />
+  <title value="Icims Patient" />
+  <status value="draft" />
+  <date value="2019-07-16T09:12:00+10:00" />
+  <publisher value="Pyrohealth.net" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://pyrohealth.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="### ICIMS Austrlian Patient Resource  &amp;#xa;&amp;#xa;#### This is a Patient resource profile to be used by ICIMS within Australia." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+      <short value="ICIMS Patient Resource" />
+    </element>
+    <element id="Patient.implicitRules">
+      <path value="Patient.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Patient.language">
+      <path value="Patient.language" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:birthPlace">
+      <path value="Patient.extension" />
+      <sliceName value="birthPlace" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:birthPlace.valueAddress:valueAddress">
+      <path value="Patient.extension.valueAddress" />
+      <sliceName value="valueAddress" />
+    </element>
+    <element id="Patient.extension:indigenousStatus">
+      <path value="Patient.extension" />
+      <sliceName value="indigenousStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:indigenousStatus.valueCoding:valueCoding">
+      <path value="Patient.extension.valueCoding" />
+      <sliceName value="indigenousStatus" />
+    </element>
+    <element id="Patient.extension:closingTheGapRegistration">
+      <path value="Patient.extension" />
+      <sliceName value="closingTheGapRegistration" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:mothersMaidenName">
+      <path value="Patient.extension" />
+      <sliceName value="mothersMaidenName" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:mothersMaidenName.valueString:valueString">
+      <path value="Patient.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <min value="1" />
+      <max value="3" />
+    </element>
+    <element id="Patient.identifier:ihiNumber">
+      <path value="Patient.identifier" />
+      <sliceName value="ihiNumber" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:medicareNumber">
+      <path value="Patient.identifier" />
+      <sliceName value="medicareNumber" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:dvaNumber">
+      <path value="Patient.identifier" />
+      <sliceName value="dvaNumber" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:healthcareCard">
+      <path value="Patient.identifier" />
+      <sliceName value="healthcareCard" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:pensionerConcessionCard">
+      <path value="Patient.identifier" />
+      <sliceName value="pensionerConcessionCard" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:commonwealthSeniorsHealthCard">
+      <path value="Patient.identifier" />
+      <sliceName value="commonwealthSeniorsHealthCard" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:medicalRecordNumber">
+      <path value="Patient.identifier" />
+      <sliceName value="medicalRecordNumber" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:insurerNumber">
+      <path value="Patient.identifier" />
+      <sliceName value="insurerNumber" />
+      <max value="0" />
+    </element>
+    <element id="Patient.active">
+      <path value="Patient.active" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name.period">
+      <path value="Patient.name.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+    </element>
+    <element id="Patient.telecom.rank">
+      <path value="Patient.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="Patient.telecom.period">
+      <path value="Patient.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <min value="1" />
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <min value="1" />
+      <max value="0" />
+    </element>
+    <element id="Patient.birthDate.extension">
+      <path value="Patient.birthDate.extension" />
+    </element>
+    <element id="Patient.birthDate.extension:accuracyIndicator">
+      <path value="Patient.birthDate.extension" />
+      <sliceName value="accuracyIndicator" />
+      <max value="0" />
+    </element>
+    <element id="Patient.birthDate.extension:birthTime">
+      <path value="Patient.birthDate.extension" />
+      <sliceName value="birthTime" />
+      <max value="0" />
+    </element>
+    <element id="Patient.birthDate.extension:birthTime.valueDateTime:valueDateTime">
+      <path value="Patient.birthDate.extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+    </element>
+    <element id="Patient.deceasedBoolean:deceasedBoolean">
+      <path value="Patient.deceasedBoolean" />
+      <sliceName value="deceasedBoolean" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.district">
+      <path value="Patient.address.district" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address.period">
+      <path value="Patient.address.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <max value="0" />
+    </element>
+    <element id="Patient.photo">
+      <path value="Patient.photo" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
+      <path value="Patient.contact" />
+      <max value="0" />
+    </element>
+    <element id="Patient.animal">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Animal" />
+      </extension>
+      <path value="Patient.animal" />
+      <max value="0" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <max value="0" />
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.managingOrganization">
+      <path value="Patient.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element id="Patient.link">
+      <path value="Patient.link" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

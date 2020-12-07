@@ -1,0 +1,51 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="icims" />
+  <url value="https://www.icims.com.au/fhir/ImplementationGuide/icims" />
+  <version value="1.0.0" />
+  <name value="Icims Implementation Guide" />
+  <status value="draft" />
+  <experimental value="true" />
+  <date value="2019-07-16T09:12:00+10:00" />
+  <publisher value="Pyrohealth.net" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://pyrohealth.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <fhirVersion value="3.0.1" />
+  <package>
+    <name value="base" />
+    <description value="Guidance on the implementation of Icims's FHIR inferfaces." />
+    <resource>
+      <example value="false" />
+      <sourceReference>
+        <reference value="CapabilityStatement/icims-capability" />
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false" />
+      <sourceReference>
+        <reference value="Patient/icims-patient" />
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false" />
+      <sourceReference>
+        <reference value="Organization/icims-organization" />
+      </sourceReference>
+    </resource>
+    <resource>
+      <example value="false" />
+      <sourceReference>
+        <reference value="Observation/icims-observation" />
+      </sourceReference>
+    </resource>
+  </package>
+  <page>
+    <source value="index.html" />
+    <title value="ICIMS" />
+    <kind value="page" />
+  </page>
+</ImplementationGuide>
